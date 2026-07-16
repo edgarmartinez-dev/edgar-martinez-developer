@@ -13,7 +13,10 @@ export default {
       // handing off — the child worker sees its own root-relative paths.
       const inner = new URL(url);
       inner.pathname = match[2] || "/";
-      return env[CHILD_APPS[match[1]]].fetch(new Request(inner, request));
+      const fwd = new Request(inner, request);
+      // request.cf doesn't cross service bindings; children read this header.
+      if (request.cf?.country) fwd.headers.set("x-geo-country", request.cf.country);
+      return env[CHILD_APPS[match[1]]].fetch(fwd);
     }
 
     if (match) return new Response("no such app", { status: 404 });
