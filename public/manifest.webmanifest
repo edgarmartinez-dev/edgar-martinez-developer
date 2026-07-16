@@ -1,0 +1,15 @@
+{
+  "name": "Edgar Martinez Developer",
+  "short_name": "Edgar Dev",
+  "description": "Edgar's fun projects — all in one place",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#cdeafc",
+  "theme_color": "#4da3e8",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

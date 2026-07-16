@@ -7,7 +7,7 @@ export const projects = [
       "Nintendo & PlayStation deal tracker — live discounts and local prices for Canada, US and 16 European stores, straight from the stores' public APIs.",
     status: "live",
     tags: ["react", "daisyui", "cloudflare-workers", "nintendo", "playstation"],
-    url: "https://ndeals.edgarmartinez.workers.dev",
+    url: "/apps/ndeals/",
     repo: "https://github.com/edgarmartinez-dev/ndeals",
     color: "#E60012",
   },
