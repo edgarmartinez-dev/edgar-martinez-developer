@@ -4,7 +4,7 @@ export const projects = [
   {
     name: "ndeals",
     description:
-      "Nintendo eShop discount tracker — live deals from Nintendo's public APIs, prices across European stores.",
+      "Nintendo eShop discount tracker — live deals & local prices for Canada, US and 16 European stores, straight from Nintendo's public APIs.",
     status: "live",
     tags: ["react", "daisyui", "cloudflare-workers"],
     url: "https://ndeals.edgarmartinez.workers.dev",
