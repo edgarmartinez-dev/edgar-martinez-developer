@@ -1,0 +1,8 @@
+{
+  "name": "edgar-martinez-developer",
+  "compatibility_date": "2026-07-16",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
