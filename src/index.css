@@ -350,6 +350,31 @@ body {
   text-decoration: underline;
 }
 
+/* ---- install button ---- */
+
+.install-btn {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: #ffd93d;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.install-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
 /* ---- footer ---- */
 
 .footer {

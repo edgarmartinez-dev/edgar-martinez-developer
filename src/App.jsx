@@ -1,4 +1,32 @@
+import { useEffect, useState } from "react";
 import { projects } from "./projects";
+
+function InstallButton() {
+  const [prompt, setPrompt] = useState(null);
+
+  useEffect(() => {
+    const onPrompt = (e) => {
+      e.preventDefault();
+      setPrompt(e);
+    };
+    window.addEventListener("beforeinstallprompt", onPrompt);
+    return () => window.removeEventListener("beforeinstallprompt", onPrompt);
+  }, []);
+
+  if (!prompt) return null;
+  return (
+    <button
+      className="install-btn"
+      onClick={async () => {
+        prompt.prompt();
+        await prompt.userChoice;
+        setPrompt(null);
+      }}
+    >
+      ⬇ Install app
+    </button>
+  );
+}
 
 const STATUS = {
   live: { label: "live", className: "status-live" },
@@ -102,6 +130,7 @@ export default function App() {
   return (
     <div className="page">
       <Scenery />
+      <InstallButton />
       <header className="hero">
         <p className="kicker">hi, i build things for fun</p>
         <h1>
