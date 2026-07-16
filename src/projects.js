@@ -2,6 +2,16 @@
 // status: "live" | "building" | "idea"
 export const projects = [
   {
+    name: "ndeals",
+    description:
+      "Nintendo eShop discount tracker — live deals from Nintendo's public APIs, prices across European stores.",
+    status: "live",
+    tags: ["react", "daisyui", "cloudflare-workers"],
+    url: "https://ndeals.edgarmartinez.workers.dev",
+    repo: "https://github.com/edgarmartinez-dev/ndeals",
+    color: "#E60012",
+  },
+  {
     name: "Project One",
     description: "A fun little experiment. Replace me with a real project.",
     status: "live",
